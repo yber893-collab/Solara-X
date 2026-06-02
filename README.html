@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>-888 || SOLARA'éX ||</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow-x: hidden;
+            background-color: #050505;
+            color: #fff;
+        }
+
+        /* Background Video */
+        .video-bg {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -2;
+            object-fit: cover;
+            opacity: 0.4; /* Membuat video agak gelap agar text terlihat */
+        }
+
+        /* Overlay Hitam untuk menambah kesan Dark */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: -1;
+        }
+
+        /* Container Utama */
+        .container {
+            width: 100%;
+            max-width: 450px;
+            padding: 30px 20px;
+            text-align: center;
+            background: rgba(10, 10, 10, 0.75);
+            border-radius: 20px;
+            backdrop-filter: blur(8px);
+            border: 2px solid #ff0055;
+            box-shadow: 0 0 25px rgba(255, 0, 85, 0.3), inset 0 0 15px rgba(0, 255, 255, 0.2);
+            margin: 20px;
+            position: relative;
+        }
+
+        /* Logo Matahari Bermata Satu yang Seram */
+        .creepy-sun {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 15px;
+            position: relative;
+            background: radial-gradient(circle, #2a0000 20%, #110000 60%, transparent 100%);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 30px #ff0000;
+            animation: pulse 3s infinite alternate;
+        }
+
+        /* Efek Sinar Matahari Tajam (Pernak-pernik) */
+        .creepy-sun::before {
+            content: '';
+            position: absolute;
+            width: 140px;
+            height: 140px;
+            border: 2px dashed #ff0055;
+            border-radius: 50%;
+            animation: rotate 10s linear infinite;
+            box-shadow: 0 0 15px #ff0055;
+        }
+
+        /* Mata di Tengah */
+        .eye {
+            width: 45px;
+            height: 25px;
+            background: #fff;
+            border-radius: 50% 50%;
+            position: relative;
+            box-shadow: 0 0 15px #fff;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .eye::after {
+            content: '';
+            width: 18px;
+            height: 18px;
+            background: radial-gradient(circle, #ff0000 30%, #000 80%);
+            border-radius: 50%;
+            box-shadow: 0 0 8px #ff0000;
+            animation: glance 4s infinite alternate;
+        }
+
+        /* Header / Judul Neon Bergerak */
+        .header-title {
+            font-size: 24px;
+            font-weight: 900;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            background: linear-gradient(90deg, #ff0055, #00ffff, #ff0055);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shine 3s linear infinite;
+            margin-bottom: 25px;
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+        }
+
+        /* Menu Links */
+        .menu-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .menu-item {
+            display: block;
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            font-size: 16px;
+            padding: 15px;
+            background: rgba(20, 20, 20, 0.8);
+            border: 1px solid #00ffff;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 8px rgba(0, 255, 255, 0.2);
+            text-shadow: 0 0 5px #00ffff;
+        }
+
+        /* Efek Hover Menu Bergerak Neon */
+        .menu-item:hover {
+            transform: translateY(-3px);
+            background: #ff0055;
+            color: #fff;
+            border-color: #ff0055;
+            box-shadow: 0 0 20px #ff0055, 0 0 30px #ff0055;
+            text-shadow: 0 0 8px #fff;
+        }
+        
+        /* Tombol khusus Premium */
+        .premium-btn {
+            border-color: #ffcc00;
+            text-shadow: 0 0 5px #ffcc00;
+            box-shadow: 0 0 8px rgba(255, 204, 0, 0.2);
+        }
+        .premium-btn:hover {
+            background: #ffcc00;
+            border-color: #ffcc00;
+            box-shadow: 0 0 20px #ffcc00;
+            text-shadow: 0 0 8px #000;
+            color: #000;
+        }
+
+        /* Pernak-pernik Tambahan (Dekorasi Sudut) */
+        .decor {
+            position: absolute;
+            font-size: 12px;
+            color: #ff0055;
+            opacity: 0.6;
+            animation: pulse 1.5s infinite alternate;
+        }
+        .top-left { top: 10px; left: 15px; }
+        .top-right { top: 10px; right: 15px; }
+
+        /* Animasi-Animasi */
+        @keyframes shine {
+            to { background-position: 200% center; }
+        }
+        @keyframes rotate {
+            100% { transform: rotate(360deg); }
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 0.8; }
+            100% { transform: scale(1.05); opacity: 1; box-shadow: 0 0 40px #ff0000; }
+        }
+        @keyframes glance {
+            0% { transform: translateX(-5px); }
+            100% { transform: translateX(5px); }
+        }
+    </style>
+</head>
+<body>
+
+    <video autoplay loop muted playsinline class="video-bg">
+        <source src="https://h.uguu.se/tpHucnxo.mp4" type="video/mp4">
+        <source src="https://d.uguu.se/KKNurvTM.mp4" type="video/mp4">
+    </video>
+    
+    <div class="overlay"></div>
+
+    <div class="container">
+        <div class="decor top-left">⚠️ SYSTEM_ONLINE</div>
+        <div class="decor top-right">☠️ SOLARA_ÉX</div>
+
+        <div class="creepy-sun" id="logo-sun">
+            <div class="eye"></div>
+        </div>
+
+        <h1 class="header-title">-𝟴𝟴𝟴 || 𝙎𝙊𝙇𝘼𝙍𝘼'𝗲́𝗫 ||</h1>
+
+        <div class="menu-list">
+            <a href="https://wa.me/6283122099764?text=Halo%20mau%20nanya" target="_blank" class="menu-item">Owner (WhatsApp)</a>
+            <a href="https://chat.whatsapp.com/KtIrMTWBdjj46G8eq5Hpmn" target="_blank" class="menu-item">Solara V1 (Group)</a>
+            <a href="https://chat.whatsapp.com/JtISpDRBPWE0md47LLjBMB" target="_blank" class="menu-item">Solara V2 (Group)</a>
+            <a href="https://tiktok.com/@apnk88" target="_blank" class="menu-item">TikTok Solara</a>
+            <a href="https://tiktok.com/@asdf.tsdf" target="_blank" class="menu-item">TikTok Owner</a>
+            <a href="https://whatsapp.com/channel/0029Vb8Fvh54CrfaIpG4642i" target="_blank" class="menu-item">Saluran WhatsApp</a>
+            <a href="https://link.dana.id/minta?full_url=https://qr.dana.id/v1/281012092026060277012458" target="_blank" class="menu-item premium-btn">✨ Order Premium (DANA) ✨</a>
+        </div>
+    </div>
+
+    <audio id="click-sound" src="https://n.uguu.se/ySUSmoKs.mp3" preload="auto"></audio>
+
+    <script>
+        const clickSound = document.getElementById('click-sound');
+        const menuItems = document.querySelectorAll('.menu-item');
+        const logoSun = document.getElementById('logo-sun');
+
+        // Fungsi untuk memainkan suara
+        function playSound() {
+            clickSound.currentTime = 0; // Reset ke detik 0 agar bisa langsung bunyi lagi
+            clickSound.play().catch(err => console.log("Audio play diblokir oleh browser sebelum ada interaksi user."));
+        }
+
+        // Efek suara saat menekan menu link
+        menuItems.forEach(item => {
+            item.addEventListener('click', () => {
+                playSound();
+            });
+        });
+
+        // Efek suara saat menekan iKON/Logo matahari
+        logoSun.addEventListener('click', () => {
+            playSound();
+            // Efek getar tambahan pada matahari saat diklik
+            logoSun.style.transform = "scale(0.9)";
+            setTimeout(() => { logoSun.style.transform = "scale(1)"; }, 100);
+        });
+    </script>
+</body>
+</html>
+
